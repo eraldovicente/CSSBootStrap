@@ -60,9 +60,19 @@
     color: #ffffff;
     font-size: 1.4rem;
     transition: all .5s ease-in-out;
+    font-family: 'Raleway', sans-serif;
 }
 
 .nav-link:hover {
     background-color: #bde8dd;
     color: #000000;
+}
+
+/* CAROUSEL */
+
+.carousel-caption h3 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 2rem;
+    font-weight: 900;
+    color: #ffffff;
 }

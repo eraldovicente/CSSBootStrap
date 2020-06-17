@@ -56,6 +56,10 @@ div.servicio {
   padding: 150px 0;
 }
 
+.descripcion_servicio {
+  background-color: cyan;
+}
+
 article img.float-left {
   margin-right: 20px;
 }

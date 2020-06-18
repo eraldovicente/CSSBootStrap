@@ -166,64 +166,29 @@
       <div class="row py-5">
         <?php
           $productos = obtenerProductos(4);
+
+          while($producto = $productos->fetch_assoc() ) {
         ?>
         <div class="col-md-3 mb-4">
           <div class="card">
-            <a href="#">
-              <img src="img/producto_mini_01.jpg" class="card-img-top">
+            <a href="producto.php?id=<?php echo $producto['id']; ?>">
+              <img src="img/<?php echo $producto['imagen_mini']; ?>" class="card-img-top">
               <div class="card-body">
-                <h3 class="card-title text-center text-uppercase">Producto 1</h3>
+                <h3 class="card-title text-center text-uppercase">
+                    <?php echo $producto['nombre']; ?>
+                </h3>
                 <p class="card-text text-uppercase">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                    <?php echo $producto['descripcion_corta']; ?> 
                 </p>
-                <p class="precio mb-0 lead text-center">$25</p>
+                <p class="precio mb-0 lead text-center">
+                    $<?php echo $producto['precio']; ?>
+                </p>
               </div>
             </a>
           </div><!--.card-->
         </div><!--.clo-md-3-->
-        <div class="col-md-3 mb-4">
-          <div class="card">
-            <a href="#">
-              <img src="img/producto_mini_02.jpg" class="card-img-top">
-              <div class="card-body">
-                <h3 class="card-title text-center text-uppercase">Producto 2</h3>
-                <p class="card-text text-uppercase">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                </p>
-                <p class="precio mb-0 lead text-center">$25</p>
-              </div>
-            </a>
-          </div><!--.card-->
-        </div><!--.clo-md-3-->
-        <div class="col-md-3 mb-4">
-          <div class="card">
-            <a href="#">
-              <img src="img/producto_mini_03.jpg" class="card-img-top">
-              <div class="card-body">
-                <h3 class="card-title text-center text-uppercase">Producto 3</h3>
-                <p class="card-text text-uppercase">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                </p>
-                <p class="precio mb-0 lead text-center">$25</p>
-              </div>
-            </a>
-          </div><!--.card-->
-        </div><!--.clo-md-3-->
-        <div class="col-md-3 mb-4">
-          <div class="card">
-            <a href="#">
-              <img src="img/producto_mini_04.jpg" class="card-img-top">
-              <div class="card-body">
-                <h3 class="card-title text-center text-uppercase">Producto 4</h3>
-                <p class="card-text text-uppercase">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                </p>
-                <p class="precio mb-0 lead text-center">$25</p>
-              </div>
-            </a>
-          </div><!--.card-->
-        </div><!--.clo-md-3-->
-      </div><!--.row-->
+        <?php } ?>
+        </div><!--.row-->
     </section>
 
     <div class="citas container-fluid py-5">

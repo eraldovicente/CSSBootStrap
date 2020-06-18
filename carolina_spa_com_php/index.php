@@ -1,7 +1,7 @@
 <?php
     include 'templates/header.php';
     include 'templates/navegacion.php';
-    include 'inc/funciones.php'
+    include 'inc/funciones.php';
 ?>
 
   <div class="container">

@@ -1,7 +1,7 @@
 <?php
 
 // Muestra multiples productos, cantidad de productos como parametro
-function obtenerProductos($cantidad = 1) {
+function obtenerProductos($cantidad = 10) {
      include 'conexion.php';
 
      try {

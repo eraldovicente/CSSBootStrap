@@ -1,7 +1,16 @@
 <?php
+
+    if (isset( $_GET['id'])) {
+      if (filter_var( $_GET['id'], FILTER_VALIDATE_INT)) {
+        echo "si";
+      } else {
+        echo "no";
+      }
+    }
+
     include 'templates/header.php';
     include 'templates/navegacion.php';
-
+    include 'inc/funciones.php';
 ?>
 
     <div class="container pt-4">
@@ -24,111 +33,28 @@
 
           <div class="row">
             <div class="card-columns">
+            <?php
+               $productos = obtenerProductos();
+
+               while($producto = $productos->fetch_assoc() ) {
+            ?>
             <div class="card">
-              <a href="#">
-                <img src="img/producto_mini_01.jpg" class="card-img-top img-fluid">
+              <a href="producto.php?id=<?php echo $producto['id']; ?>">
+                <img src="img/<?php echo $producto['imagen_mini']; ?>" class="card-img-top img-fluid">
                 <div class="card-body">
                   <h3 class="card-title text-center text-uppercase">
-                    Producto 1
+                      <?php echo $producto['nombre']; ?>
                   </h3>
-                  <p class="card-text text-uppercase">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem voluptate.</p>
-                  <p class="precio lead text-center mb-0">$ 25</p>
+                  <p class="card-text text-uppercase">
+                  <?php echo $producto['descripcion_corta']; ?> 
+                  </p>
+                  <p class="precio lead text-center mb-0">
+                      $ <?php echo $producto['precio']; ?>
+                  </p>
                 </div>
               </a>
             </div><!--.card-->
-
-
-            <div class="card">
-              <a href="#">
-                <img src="img/producto_mini_01.jpg" class="card-img-top img-fluid">
-                <div class="card-body">
-                  <h3 class="card-title text-center text-uppercase">
-                    Producto 1
-                  </h3>
-                  <p class="card-text text-uppercase">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem voluptate.</p>
-                  <p class="precio lead text-center mb-0">$ 25</p>
-                </div>
-              </a>
-            </div><!--.card-->
-
-            <div class="card">
-              <a href="#">
-                <img src="img/producto_mini_01.jpg" class="card-img-top img-fluid">
-                <div class="card-body">
-                  <h3 class="card-title text-center text-uppercase">
-                    Producto 1
-                  </h3>
-                  <p class="card-text text-uppercase">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem voluptate..</p>
-                  <p class="precio lead text-center mb-0">$ 25</p>
-                </div>
-              </a>
-            </div><!--.card-->
-
-            <div class="card">
-              <a href="#">
-                <img src="img/producto_mini_01.jpg" class="card-img-top img-fluid">
-                <div class="card-body">
-                  <h3 class="card-title text-center text-uppercase">
-                    Producto 1
-                  </h3>
-                  <p class="card-text text-uppercase">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem voluptate..</p>
-                  <p class="precio lead text-center mb-0">$ 25</p>
-                </div>
-              </a>
-            </div><!--.card-->
-
-
-            <div class="card">
-              <a href="#">
-                <img src="img/producto_mini_01.jpg" class="card-img-top img-fluid">
-                <div class="card-body">
-                  <h3 class="card-title text-center text-uppercase">
-                    Producto 1
-                  </h3>
-                  <p class="card-text text-uppercase">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem voluptate.</p>
-                  <p class="precio lead text-center mb-0">$ 25</p>
-                </div>
-              </a>
-            </div><!--.card-->
-
-            <div class="card">
-              <a href="#">
-                <img src="img/producto_mini_01.jpg" class="card-img-top img-fluid">
-                <div class="card-body">
-                  <h3 class="card-title text-center text-uppercase">
-                    Producto 1
-                  </h3>
-                  <p class="card-text text-uppercase">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem voluptate.</p>
-                  <p class="precio lead text-center mb-0">$ 25</p>
-                </div>
-              </a>
-            </div><!--.card-->
-
-            <div class="card">
-              <a href="#">
-                <img src="img/producto_mini_01.jpg" class="card-img-top img-fluid">
-                <div class="card-body">
-                  <h3 class="card-title text-center text-uppercase">
-                    Producto 1
-                  </h3>
-                  <p class="card-text text-uppercase">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem voluptate.</p>
-                  <p class="precio lead text-center mb-0">$ 25</p>
-                </div>
-              </a>
-            </div><!--.card-->
-
-            <div class="card">
-              <a href="#">
-                <img src="img/producto_mini_01.jpg" class="card-img-top img-fluid">
-                <div class="card-body">
-                  <h3 class="card-title text-center text-uppercase">
-                    Producto 1
-                  </h3>
-                  <p class="card-text text-uppercase">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem voluptate.</p>
-                  <p class="precio lead text-center mb-0">$ 25</p>
-                </div>
-              </a>
-            </div><!--.card-->
+               <?php } ?>
             </div><!--.card-columns-->
           </div><!--.row-->
         </main>

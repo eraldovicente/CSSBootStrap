@@ -1,6 +1,7 @@
 <?php
     include 'templates/header.php';
     include 'templates/navegacion.php';
+    include 'inc/funciones.php'
 ?>
 
   <div class="container">
@@ -163,6 +164,9 @@
         <span class="text-lowercase d-block">nuestros</span> productos
       </h2>
       <div class="row py-5">
+        <?php
+          $productos = obtenerProductos(4);
+        ?>
         <div class="col-md-3 mb-4">
           <div class="card">
             <a href="#">

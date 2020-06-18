@@ -1,7 +1,6 @@
 <?php
     include 'templates/header.php';
     include 'templates/navegacion.php';
-
 ?>
 
   <div class="container">

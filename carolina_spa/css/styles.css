@@ -321,3 +321,10 @@ aside {
         column-count: 4;
     }
 }
+
+/* CONTACTO */
+
+.formulario-contacto {
+    border: 2px solid #9a9a9a;
+    background-color: #ffffff;
+}

@@ -11,19 +11,19 @@
             <div class="collapse navbar-collapse w-100" id="nav_principal">
                   <ul class="nav nav-justified w-100 flex-column flex-sm-row">
                     <li class="nav-item">
-                        <a href="index.html" class="nav-link">Inicio</a>
+                        <a href="index.php" class="nav-link">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a href="nosotros.html" class="nav-link">Nosotros</a>
+                        <a href="nosotros.php" class="nav-link">Nosotros</a>
                     </li>
                     <li class="nav-item">
-                        <a href="servicios.html" class="nav-link">Servicios</a>
+                        <a href="servicios.php" class="nav-link">Servicios</a>
                     </li>
                     <li class="nav-item">
-                        <a href="productos.html" class="nav-link">Produtos</a>
+                        <a href="productos.php" class="nav-link">Produtos</a> 
                     </li>
                     <li class="nav-item">
-                        <a href="contacto.html" class="nav-link">Contacto</a>
+                        <a href="contacto.php" class="nav-link">Contacto</a>
                     </li>
                   </ul>
             </div> <!--.collapse-->

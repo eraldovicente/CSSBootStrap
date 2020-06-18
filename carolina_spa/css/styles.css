@@ -281,3 +281,18 @@ aside {
 #servicios .card-body {
     font-size: 1.3rem;
 }
+
+/* CUPON */
+
+.cupon {
+    border: 3px dashed #ffffff;
+    font-family: 'Lato', sans-serif;
+}
+
+.cupon .display-4 {
+    font-size: 2rem;
+}
+
+.cupon p {
+    font-size: 1.2rem;
+}

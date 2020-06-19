@@ -85,6 +85,11 @@ bodu {
     color: #000000;
 }
 
+.active {
+    background-color: #e082a8;
+    border-radius: 10px;
+}
+
 /* CAROUSEL */
 
 .carousel-caption h3 {

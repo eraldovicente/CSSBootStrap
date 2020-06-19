@@ -4,7 +4,12 @@
    $pagina = str_replace(".php", "", $archivo);
 
    // Definir archivo para cachear (puede ser .php también)
-   $archivoCache = 'cache/'.$pagina.'.html';
+   if (isset($_GET['id'])) {
+      $archivoCache = 'cache/'.$pagina."-".$_GET['id'].'.html';
+   } else {
+      $archivoCache = 'cache/'.$pagina.'.html';
+   }
+      
    // Cuando tiempo deberá estar este archivo almacenado
    $tiempo = 36000;
    // Checar que el archivo existe, el tiempo sea el adecuado y muestralo

@@ -1,13 +1,4 @@
 <?php
-
-    if (isset( $_GET['id'])) {
-      if (filter_var( $_GET['id'], FILTER_VALIDATE_INT)) {
-        echo "si";
-      } else {
-        echo "no";
-      }
-    }
-
     include 'templates/header.php';
     include 'templates/navegacion.php';
     include 'inc/funciones.php';

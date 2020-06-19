@@ -1,5 +1,5 @@
 <?php
-
+    
     if ( isset( $_GET['id'] ) ) {
       if ( filter_var( $_GET['id'], FILTER_VALIDATE_INT ) ) {
         $producto_id = $_GET['id'];
@@ -8,6 +8,7 @@
         exit;
       }
     }
+    $titulo = 'Producto';
     include 'templates/header.php';
     include 'templates/navegacion.php';
     include 'inc/funciones.php';

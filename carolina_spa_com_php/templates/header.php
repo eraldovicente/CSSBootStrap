@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Italianno&family=Lato:wght@400;700;900&family=Raleway:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <title><?php echo $titulo ?> | CarolinaSpa</title>
   </head>
   <body>
     

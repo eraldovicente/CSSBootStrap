@@ -1,4 +1,5 @@
 <?php
+    $titulo = 'Nome da página';
     include 'templates/header.php';
     include 'templates/navegacion.php';
 

@@ -8,10 +8,19 @@
         exit;
       }
     }
-
-    echo $producto_id;
     include 'templates/header.php';
     include 'templates/navegacion.php';
+    include 'inc/funciones.php';
+
+    // ini_set("display_error", "1");
+    // error_reporting(E_ALL);
+
+    $resultado = obtenerProducto( $producto_id );
+    while($producto = $resultado->fetch_assoc() ) {
+
+      echo "<pre>";
+      var_dump($producto);
+      echo "<pre>";
 ?>
 
     <div class="container pt-4">
@@ -48,5 +57,6 @@
     </div>
 
 <?php
+    } // Fin del while
     include 'templates/footer.php';
 ?>
